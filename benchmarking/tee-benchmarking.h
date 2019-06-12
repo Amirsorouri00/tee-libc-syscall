@@ -27,25 +27,29 @@
 #define INT_MAX __INT_MAX__ 
 
 #if defined(__i386__)
-#define __NR_sys_splice		313
-#define __NR_sys_tee		315
-#define __NR_sys_vmsplice	316
+#define __NR_sys_splice		        313
+#define __NR_sys_tee		        315
+#define __NR_sys_vmsplice	        316
 #elif defined(__x86_64__)
-#define __NR_sys_splice		275
-#define __NR_sys_tee		276
-#define __NR_sys_vmsplice	278
+#define __NR_sys_splice		        275
+#define __NR_sys_tee		        276
+#define __NR_sys_vmsplice	        278
+#define __NR_sys_process_vm_readv	310
+#define __NR_sys_process_vm_readv	311
 #elif defined(__powerpc__) || defined(__powerpc64__)
-#define __NR_sys_splice		283
-#define __NR_sys_tee		284
-#define __NR_sys_vmsplice	285
+#define __NR_sys_splice		        283
+#define __NR_sys_tee		        284
+#define __NR_sys_vmsplice	        285
 #elif defined(__ia64__)
-#define __NR_sys_splice		1297
-#define __NR_sys_tee		1301
-#define __NR_sys_vmsplice	1302
+#define __NR_sys_splice		        1297
+#define __NR_sys_tee		        1301
+#define __NR_sys_vmsplice	        1302
+#define __NR_sys_process_vm_readv	1332
+#define __NR_sys_process_vm_readv	1333
 #elif defined(__arm__)
-#define __NR_sys_splice		340
-#define __NR_sys_tee		342
-#define __NR_sys_vmsplice	343
+#define __NR_sys_splice	            340
+#define __NR_sys_tee		        342
+#define __NR_sys_vmsplice	        343
 #else
 #error unsupported arch
 #endif
