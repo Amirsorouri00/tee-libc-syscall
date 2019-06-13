@@ -23,7 +23,7 @@
 
 
 #define SPLICE_SIZE  1024
-#define K_MULTIPLY   10000
+#define K_MULTIPLY   40000
 #define INT_MAX __INT_MAX__ 
 
 #if defined(__i386__)
@@ -35,7 +35,7 @@
 #define __NR_sys_tee		        276
 #define __NR_sys_vmsplice	        278
 #define __NR_sys_process_vm_readv	310
-#define __NR_sys_process_vm_readv	311
+#define __NR_sys_process_vm_writev	311
 #elif defined(__powerpc__) || defined(__powerpc64__)
 #define __NR_sys_splice		        283
 #define __NR_sys_tee		        284
@@ -45,7 +45,7 @@
 #define __NR_sys_tee		        1301
 #define __NR_sys_vmsplice	        1302
 #define __NR_sys_process_vm_readv	1332
-#define __NR_sys_process_vm_readv	1333
+#define __NR_sys_process_vm_writev	1333
 #elif defined(__arm__)
 #define __NR_sys_splice	            340
 #define __NR_sys_tee		        342

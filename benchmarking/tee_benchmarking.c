@@ -13,6 +13,9 @@
 
 #include "tee-benchmarking.h"
 
+#define meg     1000000
+
+
 static int align_mask = 65535;
 static int splice_flags;
 clock_t start, end;
@@ -230,6 +233,8 @@ int main(int argc, char *argv[])
 				double result = time_calc(end, start, name);
 				printf("---------------------------------------------\n");
 				result = time_calc(end, first_start, "realtime_calculation");
+		        printf("The frequency is eqals to(Mbps): %f .\n", (double)((2* K_MULTIPLY*SPLICE_SIZE)/(result*meg)));
+
 				// printf("time to write and read into the pipe by vmsplice = %f\n", result);
 				exit(0);
 			}
